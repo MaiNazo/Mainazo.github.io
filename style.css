@@ -1,0 +1,157 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 0; /* ヘッダーの高さ */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+
+/* ナビゲーションのデザイン */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 全体のレイアウトを調整 */
+html, body {
+  background-color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* ヘッダーの高さ分だけ余白を作る（大事！） */
+body {
+  padding-top: 60px; /* ヘッダーの高さ分（調整可） */
+}
+
+/* main（メインコンテンツ）を伸ばす */
+main {
+  margin-top: 100px; /* ヘッダーの高さ + 余白（調整可） */
+  padding: 20px;
+  background: rgb(227, 255, 219);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フッターを下部に固定 */
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+/* ボタンのデザイン */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* セクションごとのスタイル */
+section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* セクション内のレイアウトを横並びにする */
+.content {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+  gap: 20px; /* 画像とテキストの間の余白 */
+}
+
+/* 画像のサイズ調整 */
+.image img {
+  width: 150px; /* 画像の幅（調整可） */
+  height: auto;
+  border-radius: 10px; /* 角を丸くする（お好みで） */
+}
+
+/* スマホ対応（狭い画面のときは縦並びにする） */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+.blog-post h3 {
+  margin-bottom: 5px;
+  color: #333;
+}
+.blog-post p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* カテゴリ一覧 */
+.category-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+.category-list li {
+  background: #4CAF50;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.category-list a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 記事のスタイル */
+.blog-post {
+  background: #f9f9f9;
+  padding: 15px;
+  border-left: 5px solid #4CAF50;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.blog-post h3 a {
+  text-decoration: none;
+  color: #333;
+}
+.blog-post h3 a:hover {
+  color: #4CAF50;
+}
+
+/* 詳細ページの画像 */
+.blog-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
