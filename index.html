@@ -3,81 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイクラ謎解きを楽しむ会</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #96ff96;
-            padding: 50px;
-            background-image: url('image/grass.png');
-            text-align: center;
-            font-size: 1.5rem;
-        }
-        nav {
-            text-align: center;
-            padding: 1rem;
-            background-color: #ddd;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #96ff96;
-            margin-top: 20px;
-        }
-        h1 {
-            color: white;
-            font-size: 96px;
-        }
-    </style>
+    <title>マイ謎会 公式サイト</title>
 </head>
 <body>
     <header>
         <h1>マイクラ謎解きを楽しむ会</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="about.html">マイ謎会とは</a></li>
+                <li><a href="join.html">参加方法</a></li>
+                <li><a href="records.html">過去の記録</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <a href="#">ホーム</a>
-        <a href="#">ブログ</a>
-        <a href="#">会員について</a>
-        <a href="#">謎解きマップ</a>
-        <a href="#">関連サイト</a>
-    </nav>
-    <div class="container">
+    <main>
         <h2>ようこそ！</h2>
-        <p>ここはマイクラの謎解きマップを遊んだり作ったりする会の公式サイトです。<br>現在、会員募集中です！下記リンクから応募お願いします！</p>
-    </div>
-    <div class="container">
-        <h2>最新のブログ記事</h2>
-        <ul>
-            {% for post in site.posts %}
-                <li>
-                    <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    <footer>
-        &copy; 2025 マイクラ謎解きを楽しむ会
-    </footer>
+        <p>マイクラで謎解きを楽しむ「マイ謎会」の公式サイトです。</p>
+    </main>
 </body>
 </html>
