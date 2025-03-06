@@ -1,5 +1,21 @@
 title: マイクラ謎解きを楽しむ会
 description: マイクラの謎解きマップを楽しむ会のブログサイト
-theme: minima # シンプルなテーマ
+baseurl: "" # ルートURL（サブフォルダなしの場合は空白）
+url: "https://<GitHubユーザー名>.github.io" # GitHub PagesのURLに置き換える
+theme: minima # シンプルなJekyllのテーマ
 plugins:
-  - jekyll-feed
+  - jekyll-feed # RSSフィードを自動生成
+  - jekyll-seo-tag # SEO対策
+  - jekyll-sitemap # サイトマップを自動生成
+
+# ナビゲーションメニューの設定
+navigation:
+  - title: ホーム
+    url: /
+  - title: ブログ
+    url: /blog/
+  - title: 謎解きマップ
+    url: /maps/
+
+# Markdown 記法を有効にする
+markdown: kramdown
