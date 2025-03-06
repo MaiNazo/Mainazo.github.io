@@ -1,18 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // ブログフォルダ内のファイル一覧（手動で管理）
-    const blogPosts = [
-        { title: "マイ謎会爆誕！", url: "blogs/post1.html", date: "2025-04-01" },
-    ];
+fetch('blogs/blog.json')
+  .then(response => response.json())
+  .then(data => {
+    if (!Array.isArray(data) || data.length === 0) {
+      console.warn("ブログデータがありません");
+      document.getElementById("latest-blog").innerHTML = "<p>まだ記事がありません</p>";
+      return;
+    }
 
-    // 日付順にソート（最新のものを取得）
-    blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    // 最新の日付順にソート（万が一順番がバラバラでもOK）
+    data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    // 最新の記事を取得
-    const latestPost = blogPosts[0];
+    // 最新の記事（ソート後の一番最初の要素）
+    let latestPost = data[0];
 
-    // 表示を更新
-    document.getElementById("latest-post").innerHTML = `
-        <h3><a href="${latestPost.url}">${latestPost.title}</a></h3>
-        <p>投稿日: ${latestPost.date}</p>
-    `;
-});
+    // タイトルが長すぎる場合は省略（オプション）
+    let maxLength = 20; // 20文字以上は省略
+    let shortTitle = latestPost.title.length > maxLength ? latestPost.title.substring(0, maxLength) + "..." : latestPost.title;
+
+    // HTMLにデータを埋め込む
+    document.getElementById("blog-title").innerHTML =
+      `<a href="${latestPost.url}">${shortTitle}</a>`;
+  })
+  .catch(error => console.error("ブログデータの取得に失敗しました:", error));
