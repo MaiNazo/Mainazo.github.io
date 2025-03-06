@@ -1,0 +1,5 @@
+title: マイクラ謎解きを楽しむ会
+description: マイクラの謎解きマップを楽しむ会のブログサイト
+theme: minima # シンプルなテーマ
+plugins:
+  - jekyll-feed
