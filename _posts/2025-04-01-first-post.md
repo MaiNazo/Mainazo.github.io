@@ -1,3 +1,8 @@
+---
+layout: post
+title: "My First Blog Post"
+date: 2025-04-01
+---
 これはブログの最初の記事です！  
 マイクラ謎解きの情報をどんどん発信していきます。
 
