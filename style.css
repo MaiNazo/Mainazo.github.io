@@ -207,3 +207,23 @@ h2 {
     font-size: 14px;
     color: #666;
 }
+
+#filter-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    margin: 5px;
+    padding: 8px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-button:hover {
+    background: #0056b3;
+}
