@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             for (const category in categories) {
                 const categorySection = document.createElement("section");
                 categorySection.classList.add("category-section");
-                categorySection.style.Width = "900px";  // 900pxに広げる
+                categorySection.style.width = "900px";  // 900pxに広げる
                 categorySection.style.margin = "0 auto";
 
                 const categoryTitle = document.createElement("h2");
