@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const blogContainer = document.getElementById("blog-container");
 
-    const jsonUrl = "../blog.json";
+    const jsonUrl = "blog.json";
 
     fetch(jsonUrl)
         .then(response => response.json())
