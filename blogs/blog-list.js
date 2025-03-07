@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const blogContainer = document.getElementById("blog-container");
 
     // GitHub Pages の JSON ファイルのパス（リポジトリ名に応じて修正）
-    const jsonUrl = "../blog.json";
+    const jsonUrl = "blog.json";
 
     // JSONファイルを取得
     fetch(jsonUrl)
