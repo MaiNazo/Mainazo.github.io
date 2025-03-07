@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 categorySection.classList.add("category-section");
 
                 // **横幅を広げるためのCSSを追加**
-                categorySection.style.maxWidth = "700px";  // 900pxに広げる
+                categorySection.style.width = "700px";  // 900pxに広げる
                 categorySection.style.margin = "0 auto";   // 中央揃えにする
 
                 const categoryTitle = document.createElement("h2");
