@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const categorySection = document.createElement("section");
                 categorySection.classList.add("category-section");
                 categorySection.style.width = "700px";
+                categorySection.style.margin = "0 auto"; 
 
                 const categoryTitle = document.createElement("h2");
                 categoryTitle.textContent = category;
