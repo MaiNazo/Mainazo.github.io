@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             for (const category in categories) {
                 const categorySection = document.createElement("section");
                 categorySection.classList.add("category-section");
+                categorySection.style.Width = 900px;
 
                 const categoryTitle = document.createElement("h2");
                 categoryTitle.textContent = category;
