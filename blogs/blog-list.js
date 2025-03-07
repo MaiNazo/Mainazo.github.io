@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 categories[category].forEach(blog => {
                     const article = document.createElement("section");
-                    article.style.width = 700px;
                     article.classList.add("blog-article");
                     article.dataset.tags = blog.tags ? blog.tags.join(",") : ""; // データ属性にタグを保存
                     article.innerHTML = `<a href="${blog.url}"><h3>${blog.title}</h3></a><p>${blog.date}</p>`;
