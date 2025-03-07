@@ -170,3 +170,40 @@ h2 {
   padding-left: 10px;
   border-left: 5px solid #3498db; /* 左側にライン */
 }
+/* カテゴリのセクション */
+.category-section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa; /* 背景色を薄いグレーに */
+    border-radius: 10px;
+}
+
+/* 記事ごとのボックス */
+.blog-article {
+    padding: 15px;
+    margin: 10px 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 記事にカーソルを合わせたとき */
+.blog-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 記事のタイトル */
+.blog-article h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* 記事の日付 */
+.blog-article p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
