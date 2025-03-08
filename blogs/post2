@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイ謎会のルールについて</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header>
+    <h1>マイ謎会 - ブログ</h1>
+    <nav>
+        <ul>
+            <li><a href="../index.html">ホーム</a></li>
+            <li><a href="../join.html">参加方法</a></li>
+            <li><a href="blog.html">ブログ</a></li>
+            <li><a href="../records.html">過去の記録</a></li>
+            <li><a href="../about.html">この会について</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>📢　マイ謎会のルールについて</h2>
+        <p><strong>投稿日：</strong> 2025年4月1日</p>
+        <p> こんにちは。せんちゃです。今回は皆様に、マイ謎会でのルールを伝えたいと思います。
+        <br>といっても、よくあるルールしかありませんので。</p>
+        <h3>言葉遣いについて</h3>
+        <p> マイ謎会では、他人が不快に思うような行為は厳禁です。
+        <br>もしもそう言った言動が確認されたなら、一時的に制限ロールをつけさせていただく可能性があります。
+        <br>また、そう言った行為が繰り返されますと、サーバーから退出してもらう可能性がありますのでご注意ください。
+        <br><br>もしもそのような言動を見かけましたら、クォーツロールまたは運営をメンションしていただけますと助かります。</p>
+
+        <h3>その他</h3>
+        <p>もしも、いわゆる「荒らし」が入ってきた場合は、すぐに運営をメンションしていただけますと助かります。
+        <br></p>
+        
+        <p style="text-align: right;">せんちゃ</p>
+
+        <a href="blog.html" class="button">← ブログ一覧に戻る</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 マイ謎会</p>
+</footer>
+
+</body>
+</html>
