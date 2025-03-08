@@ -24,12 +24,13 @@
 
 <main>
     <label for="category-filter">カテゴリ: </label>
-    <select id="category-filter">
-        <option value="all">すべて</option>
-        <option value="お知らせ">お知らせ</option>
-        <option value="イベント">イベント</option>
-        <option value="おすすめ">おすすめ</option>
-    </select>
+    <div id="category-buttons">
+    <button class="category-button" data-category="all">すべて</button>
+    <button class="category-button" data-category="イベント">イベント</button>
+    <button class="category-button" data-category="マップ紹介">マップ紹介</button>
+    <button class="category-button" data-category="その他">その他</button>
+</div>
+
 
     <section id="blog-list"></section>
 </main>
