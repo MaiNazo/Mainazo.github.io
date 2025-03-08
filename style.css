@@ -234,7 +234,7 @@ a {
 }
 
 .category-button {
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -245,7 +245,7 @@ a {
 }
 
 .category-button:hover {
-    background-color: #0056b3;
+    background-color: #2C8F30;
 }
 
 .no-articles {
