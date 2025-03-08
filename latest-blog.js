@@ -18,7 +18,7 @@ fetch('blogs/blog.json')
     let shortTitle = latestPost.title.length > maxLength ? latestPost.title.substring(0, maxLength) + "..." : latestPost.title;
 
     // HTMLにデータを埋め込む
-    document.getElementById("latest-blog").innerHTML =
-      `<h2>最新のブログ</h2><p>${shortTitle}</p><a href="blogs/${latestPost.url}" class="button">記事を読む</a>`;
+    document.getElementById("blog-title").innerHTML =
+      `${shortTitle}<br><a href="blogs/${latestPost.url}" class="button">記事を読む</a>`;
   })
   .catch(error => console.error("ブログデータの取得に失敗しました:", error));
