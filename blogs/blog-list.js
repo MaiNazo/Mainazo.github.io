@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
         blogs.forEach(blog => {
             const blogElement = document.createElement("section");
             blogElement.classList.add("blog-post");
-            blogElement.style.width = "700px";
             blogElement.innerHTML = `
                 <h3><a href="${blog.url}">${blog.title}</a></h3>
                 <p>${blog.date}<br>カテゴリ: ${blog.category}</p>
