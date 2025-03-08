@@ -1,80 +1,36 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const blogContainer = document.getElementById("blog-container");
-    const filterContainer = document.createElement("div");
-    filterContainer.id = "filter-container";
-    document.body.insertBefore(filterContainer, blogContainer); // フィルターをブログの前に追加
+document.addEventListener("DOMContentLoaded", function () {
+    const blogListContainer = document.getElementById("blog-list");
+    const categoryFilter = document.getElementById("category-filter");
 
-    const jsonUrl = "blog.json";
-
-    fetch(jsonUrl)
+    // JSON を読み込む
+    fetch("blog.json")
         .then(response => response.json())
-        .then(blogData => {
-            const categories = {};
-            const tags = new Set();
+        .then(blogs => {
+            displayBlogs(blogs);
 
-            blogData.forEach(blog => {
-                if (!categories[blog.category]) {
-                    categories[blog.category] = [];
-                }
-                categories[blog.category].push(blog);
+            // カテゴリフィルターの変更イベント
+            categoryFilter.addEventListener("change", function () {
+                const selectedCategory = categoryFilter.value;
+                const filteredBlogs = selectedCategory === "all"
+                    ? blogs
+                    : blogs.filter(blog => blog.category === selectedCategory);
 
-                if (blog.tags) {
-                    blog.tags.forEach(tag => tags.add(tag));
-                }
+                displayBlogs(filteredBlogs);
             });
-
-            // タグフィルターの作成
-            const allButton = document.createElement("button");
-            allButton.textContent = "すべて表示";
-            allButton.classList.add("filter-button");
-            allButton.addEventListener("click", () => filterBlogs(null));
-            filterContainer.appendChild(allButton);
-
-            tags.forEach(tag => {
-                const button = document.createElement("button");
-                button.textContent = tag;
-                button.classList.add("filter-button");
-                button.addEventListener("click", () => filterBlogs(tag));
-                filterContainer.appendChild(button);
-            });
-
-            // ブログ記事を表示
-            for (const category in categories) {
-                const categorySection = document.createElement("section");
-                categorySection.classList.add("category-section");
-                categorySection.style.width = "700px";
-                categorySection.style.margin = "0 auto"; 
-
-                const categoryTitle = document.createElement("h2");
-                categoryTitle.textContent = category;
-                categorySection.appendChild(categoryTitle);
-
-                categories[category].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-                categories[category].forEach(blog => {
-                    const article = document.createElement("section");
-                    article.classList.add("blog-article");
-                    article.dataset.tags = blog.tags ? blog.tags.join(",") : ""; // データ属性にタグを保存
-                    article.innerHTML = `<a href="${blog.url}"><h3>${blog.title}</h3></a><p>${blog.date}</p>`;
-                    categorySection.appendChild(article);
-                });
-
-                blogContainer.appendChild(categorySection);
-            }
         })
-        .catch(error => {
-            console.error("ブログデータの読み込みに失敗しました:", error);
-            blogContainer.innerHTML = "<p>ブログの取得に失敗しました。</p>";
-        });
+        .catch(error => console.error("ブログデータの読み込みに失敗しました:", error));
 
-    function filterBlogs(tag) {
-        document.querySelectorAll(".blog-article").forEach(article => {
-            const articleTags = article.dataset.tags.split(",");
-            if (!tag || articleTags.includes(tag)) {
-                article.style.display = "block";
-            } else {
-                article.style.display = "none";
-            }
+    // 記事を表示する関数
+    function displayBlogs(blogs) {
+        blogListContainer.innerHTML = ""; // 一度リストをクリア
+        blogs.forEach(blog => {
+            const blogElement = document.createElement("div");
+            blogElement.innerHTML = `
+                <h3><a href="${blog.url}">${blog.title}</a></h3>
+                <p>${blog.date} - カテゴリ: ${blog.category}</p>
+                <p>${blog.content}</p>
+            `;
+            blogListContainer.appendChild(blogElement);
         });
     }
 });
