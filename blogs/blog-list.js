@@ -21,18 +21,26 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("ブログデータの読み込みに失敗しました:", error));
 
     // 記事を表示する関数
-    function displayBlogs(blogs) {
-        blogListContainer.innerHTML = ""; // 一度リストをクリア
-        blogs.forEach(blog => {
-            const blogElement = document.createElement("section"); // 各記事を section タグで囲む
-            blogElement.classList.add("blog-post"); // CSS用のクラスを追加
-            blogElement.style.width = "700px";
-            blogElement.innerHTML = `
-                <h3><a href="${blog.url}">${blog.title}</a></h3>
-                <p>${blog.date}<br>　カテゴリ: ${blog.category}</p>
-                <p>　${blog.content}</p>
-            `;
-            blogListContainer.appendChild(blogElement);
-        });
+function displayBlogs(blogs) {
+    blogListContainer.innerHTML = ""; // 一度リストをクリア
+
+    if (blogs.length === 0) {
+        // 記事がない場合の表示
+        const noResult = document.createElement("p");
+        noResult.textContent = "該当する記事はありません。";
+        noResult.classList.add("no-articles");
+        blogListContainer.appendChild(noResult);
+        return;
     }
-});
+
+    blogs.forEach(blog => {
+        const blogElement = document.createElement("section");
+        blogElement.classList.add("blog-post");
+        blogElement.innerHTML = `
+            <h3><a href="${blog.url}">${blog.title}</a></h3>
+            <p>${blog.date} - カテゴリ: ${blog.category}</p>
+            <p>${blog.content}</p>
+        `;
+        blogListContainer.appendChild(blogElement);
+    });
+}
