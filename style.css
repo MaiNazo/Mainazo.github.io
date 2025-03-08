@@ -43,7 +43,7 @@ body {
 
 /* main（メインコンテンツ）を伸ばす */
 main {
-  margin-top: 100px; /* ヘッダーの高さ + 余白（調整可） */
+  margin-top: 30px; /* ヘッダーの高さ + 余白（調整可） */
   padding: 20px;
   background: rgb(227, 255, 219);
   max-width: 800px;
