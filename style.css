@@ -46,7 +46,7 @@ main {
   margin-top: 100px; /* ヘッダーの高さ + 余白（調整可） */
   padding: 20px;
   background: rgb(227, 255, 219);
-  max-width: 800px;
+  width: 800px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
