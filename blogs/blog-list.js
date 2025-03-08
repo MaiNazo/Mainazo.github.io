@@ -38,8 +38,8 @@ function displayBlogs(blogs) {
         blogElement.classList.add("blog-post");
         blogElement.innerHTML = `
             <h3><a href="${blog.url}">${blog.title}</a></h3>
-            <p>${blog.date} - カテゴリ: ${blog.category}</p>
-            <p>${blog.content}</p>
+            <p>${blog.date}<br>カテゴリ: ${blog.category}</p>
+            <p>　${blog.content}</p>
         `;
         blogListContainer.appendChild(blogElement);
     });
