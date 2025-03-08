@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function displayBlogs(blogs) {
         blogListContainer.innerHTML = ""; // 一度リストをクリア
         blogs.forEach(blog => {
-            const blogElement = document.createElement("div");
+            const blogElement = document.createElement("article"); // 各記事を article タグで囲む
             blogElement.innerHTML = `
                 <h3><a href="${blog.url}">${blog.title}</a></h3>
                 <p>${blog.date} - カテゴリ: ${blog.category}</p>
