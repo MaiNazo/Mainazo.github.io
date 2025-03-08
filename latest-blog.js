@@ -19,6 +19,6 @@ fetch('blogs/blog.json')
 
     // HTMLにデータを埋め込む
     document.getElementById("blog-title").innerHTML =
-      `<a href="blogs/${latestPost.url}">${shortTitle}</a>`;
+      `<p>${shortTitle}</p><a href="blogs/${latestPost.url}" class="button">記事を読む</a>`;
   })
   .catch(error => console.error("ブログデータの取得に失敗しました:", error));
