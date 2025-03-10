@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     setTimeout(function() {
         loadingScreen.style.display = "none";  // 非表示にする
         mainContent.style.display = "block";  // メインコンテンツを表示
-    }, 500); // 0.5秒後に完全に消す
+    }, 1000); // 0.5秒後に完全に消す
 });
 
 function toggleMenu() {
