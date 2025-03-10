@@ -22,3 +22,7 @@ fetch('blogs/blog.json')
       `${shortTitle}<br><a href="blogs/${latestPost.url}" class="button">記事を読む</a>`;
   })
   .catch(error => console.error("ブログデータの取得に失敗しました:", error));
+
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("show");
+}
