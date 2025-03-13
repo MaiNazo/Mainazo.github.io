@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会員の仕組み</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-95L0JZQNBT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-95L0JZQNBT');
+</script>
+<body data-title="会員の仕組み">
+    <div id="header-container"></div>
+    
+    <main>
+        <section>
+            <h2>会員証について</h2>
+            <p>ここに各ページの内容を入れます。</p>
+        </section>
+        <section>
+            <h2>訂正</h2>
+            <p>会員証の情報に訂正があった場合は、こちらからお願いします。</p>
+            <あ
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1frmum1TvbmycOcKTAdDde8-3gvcdetLCYXcRYhmrRdhWYg/viewform?usp=header">訂正フォーム</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 マイクラ謎解きを楽しむ会</p>
+    </footer>
+</body>
+</html>
