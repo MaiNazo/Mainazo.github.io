@@ -302,5 +302,13 @@ a {
 }
 
 .imag-tile tr td {
+  max-width: 50%;
+}
+
+.imag-tile tr td img {
+  max-width: 100%
+}
+
+.imag-tile tr td p {
   margin: 0;
 }
