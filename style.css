@@ -300,3 +300,7 @@ a {
 .imag-tile {
   max-width: 100%
 }
+
+.imag-tile tr td {
+  margin: 0;
+}
